@@ -28,6 +28,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+import utilities.NoteApi;
+
 public class CreateAccountActivity extends AppCompatActivity {
     private Button loginBtn;
     private Button createAcctBtn;
@@ -116,6 +118,10 @@ public class CreateAccountActivity extends AppCompatActivity {
                                         if (Objects.requireNonNull(task.getResult()).exists()){
                                             progressBar.setVisibility(View.INVISIBLE);
                                             String name = task.getResult().getString("username");
+
+                                            NoteApi noteApi = NoteApi.getInstance(); // Global API
+                                            noteApi.setUserId(currentUserId);
+                                            noteApi.setUsername(name);
 
                                             Intent intent = new Intent(CreateAccountActivity.this, PostNoteActivity.class);
                                             intent.putExtra("username", name);
