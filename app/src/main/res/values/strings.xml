@@ -9,4 +9,8 @@
     <string name="or_text">Or</string>
     <string name="create_text">Create Account</string>
     <string name="username_hint">Username</string>
+    <string name="title_hint">Note Title</string>
+    <string name="postBodyHint">Start writing</string>
+    <string name="postButtonText">Save</string>
+    <string name="take_photo">Get Photo</string>
 </resources>

@@ -1,8 +1,5 @@
 package com.eoghan.note;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -76,7 +76,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         createAcctBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!TextUtils.isEmpty(emailEditText.getText().toString()) && !TextUtils.isEmpty(passwordEditText.getText().toString()) && !TextUtils.isEmpty(userNameEditText.getText().toString())){
+                if (!TextUtils.isEmpty(emailEditText.getText().toString()) && !TextUtils.isEmpty(passwordEditText.getText().toString()) && !TextUtils.isEmpty(userNameEditText.getText().toString())) {
 
                     String email = emailEditText.getText().toString().trim();
                     String password = passwordEditText.getText().toString().trim();
@@ -97,7 +97,7 @@ public class CreateAccountActivity extends AppCompatActivity {
             firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()){
+                    if (task.isSuccessful()) {
                         // We take user to AddNoteActivity
                         currentUser = firebaseAuth.getCurrentUser();
                         assert currentUser != null;
@@ -115,7 +115,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                                 documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                     @Override
                                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                        if (Objects.requireNonNull(task.getResult()).exists()){
+                                        if (Objects.requireNonNull(task.getResult()).exists()) {
                                             progressBar.setVisibility(View.INVISIBLE);
                                             String name = task.getResult().getString("username");
 
