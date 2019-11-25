@@ -13,4 +13,6 @@
     <string name="postBodyHint">Start writing</string>
     <string name="postButtonText">Save</string>
     <string name="take_photo">Get Photo</string>
+    <string name="camera">Camera</string>
+    <string name="image">Get image</string>
 </resources>
