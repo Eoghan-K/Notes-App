@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Notas</string>
+    <string name="title_text">Ideas and Random Thoughts</string>
+    <string name="note_text">Ideas y pensamientos al azar</string>
+    <string name="get_started_text">Get Started</string>
+    <string name="email_hint">Empezar:</string>
+    <string name="password_hint">Password:</string>
+    <string name="login_text">Contraseña:</string>
+    <string name="or_text">O</string>
+    <string name="create_text">Create Account</string>
+    <string name="username_hint">Crear una cuenta</string>
+    <string name="title_hint">Título de la nota</string>
+    <string name="postBodyHint">Empieza a escribir</string>
+    <string name="postButtonText">Salvar</string>
+    <string name="take_photo">Get Photo</string>
+    <string name="camera">Obtener fotos</string>
+    <string name="image">Obtener la imagen</string>
+</resources>
